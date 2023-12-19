@@ -1,0 +1,24 @@
+---
+version: 3
+
+images:
+  base_image:
+    name: container-registry.oracle.com/oracle_linux_automation_manager/olam-ee:latest
+
+dependencies:
+  python_interpreter:
+    package_system: python39
+    python_path: /usr/bin/python3.9
+  ansible_core:
+    package_pip: ansible-core 
+  ansible_runner:
+    package_pip: ansible-runner
+  galaxy:
+    collections: 
+    - oracle.oci
+
+additional_build_steps:
+  prepend_builder:
+    - RUN pip3 install --upgrade pip setuptools 
+    - RUN pip3 install oci
+    - RUN ansible-galaxy collection install oracle.oci
