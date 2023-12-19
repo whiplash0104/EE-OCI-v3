@@ -1,7 +1,7 @@
 Instalar ANSIBLE BUILDER:
 
 	$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-  $ sudo yum install python3.9
+  	$ sudo yum install python3.9
 	$ python3.9 get-pip.py
 	$ python3.9 -m pip --version
 	$ pip3 install ansible-builder==3.0.0
