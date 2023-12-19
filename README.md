@@ -8,6 +8,8 @@ Instalar ANSIBLE BUILDER:
 
 Compilar imagen de contenedor
 
+	$ git clone https://github.com/whiplash0104/EE-OCI-v3.git
+ 	$ cd EE-OCI-v3/
 	$ ansible-builder build -v 3 -t ee-oci
 
 Push de imagen en registry con Podman
